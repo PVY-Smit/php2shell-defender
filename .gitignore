@@ -1,0 +1,4 @@
+*.bak
+*.log.local
+php-ini-recovered.txt
+php.ini.rebuilt

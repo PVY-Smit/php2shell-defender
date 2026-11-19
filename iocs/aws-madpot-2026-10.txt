@@ -1,0 +1,9 @@
+# IPs Amazon Threat Intelligence reported exploiting PHP2Shell (October 2026).
+# These are shared anonymising services: a match means "investigate", not "proof".
+# Source: https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/
+103.216.220.92
+31.223.184.166
+37.19.200.5
+134.209.159.64
+103.114.163.188
+95.217.98.37

@@ -1,0 +1,14 @@
+; loaded ini: '/opt/php/lib/php.ini'
+allow_url_fopen = '1'
+allow_url_include = ''
+error_log = NULL
+memory_limit = '128M'
+post_max_size = '300M'
+session.upload_progress.enabled = '1'
+mbstring.http_output_conv_mimetypes = '^(text/|application/xhtml\\+xml)'
+fpm.config = NULL
+upload_max_filesize = '30M'
+
+; extensions: Core, date, mysqlnd, mysqli, gd, Zend OPcache
+; zend_extensions: Zend OPcache
+; live session.upload_progress.enabled = '0'

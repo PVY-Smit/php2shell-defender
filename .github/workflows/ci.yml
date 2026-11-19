@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-unit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: ShellCheck
+        run: shellcheck scripts/*.sh tools/*.sh tests/*.sh
+      - name: Unit tests
+        run: tests/run.sh
+
+  fpm-integration:
+    # Runs the audit against a real, throwaway PHP-FPM on the CI runner.
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PHP-FPM
+        run: sudo apt-get update -q && sudo apt-get install -y -q php8.3-fpm
+      - name: Integration test
+        run: sudo tests/integration-fpm.sh

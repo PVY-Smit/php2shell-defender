@@ -1,0 +1,5 @@
+[17-Oct-2026 03:12:40] NOTICE: fpm is running, pid 1201
+[17-Oct-2026 03:12:40] NOTICE: PHP message: PHP Warning:  PHP Startup: Unable to load dynamic library 'gd' (tried: /opt/php/lib/extensions/gd.so (cannot open shared object file)) in Unknown on line 0
+[21-Oct-2026 22:41:07] WARNING: [pool www] child 2211 said into stderr: "PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in Unknown on line 0"
+[21-Oct-2026 22:41:07] WARNING: [pool www] child 2211 exited on signal 11 (SIGSEGV) after 0.412311 seconds from start
+[22-Oct-2026 08:00:00] NOTICE: [pool www] child 2290 started
