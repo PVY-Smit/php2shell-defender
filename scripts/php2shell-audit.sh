@@ -214,7 +214,7 @@ if [ -n "$FPM" ]; then
     CHANGED=0
     CONF_DIR=""; [ -n "$MASTER_CONF" ] && CONF_DIR=$(dirname "$MASTER_CONF")
     for f in "$INI_FILE" "$MASTER_CONF" "$CONF_DIR"/pool.d/*.conf "$CONF_DIR"/php-fpm.d/*.conf; do
-      [ -n "$f" ] && [ -f "$f" ] || continue
+      if [ -z "$f" ] || [ ! -f "$f" ]; then continue; fi
       if [ -n "$START_EPOCH" ] && [ "$(stat -c %Y "$f")" -gt "$START_EPOCH" ]; then
         warn "$f changed after php-fpm started: not active until a restart."
         CHANGED=1
